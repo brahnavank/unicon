@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+<meta charset="utf-8">
+<link rel="icon"
+	href="data:image/x-icon;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiM4MjNhOWI7fS5jbHMtMntmaWxsOiNlY2JkZmY7fS5jbHMtM3tmaWxsOiNmZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5NdF9IVE1MPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yMiwwSDRBMiwyLDAsMCwwLDIsMlYzMGEyLDIsMCwwLDAsMiwySDI4YTIsMiwwLDAsMCwyLTJWOFoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0yMiwwVjdhMSwxLDAsMCwwLDEsMWg3WiIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTIwLjY0LDI2Ljc3bC0xLjI4LTEuNTRMMjQuNDQsMjFsLTUuMDgtNC4yMywxLjI4LTEuNTQsNiw1YTEsMSwwLDAsMSwwLDEuNTRaIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTEuMjgsMjYuNzdsLTYtNWExLDEsMCwwLDEsMC0xLjU0bDYtNSwxLjI4LDEuNTRMNy40OCwyMWw1LjA4LDQuMjNaIi8+PHJlY3QgY2xhc3M9ImNscy0zIiB4PSI3Ljc1IiB5PSIyMCIgd2lkdGg9IjE2LjQ5IiBoZWlnaHQ9IjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04LjI2IDMxLjQyKSByb3RhdGUoLTc1Ljk1KSIvPjwvc3ZnPg=="
+	type="image/x-icon" />
+
+<title>Unicon V 1.0</title>
+
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+
+
+
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+.e-fe-icon {
+	display: inline-block;
+	height: 50px;
+	margin: 0 8px 0 0;
+	vertical-align: middle;
+	width: 50px;
+}
+
+.e-fe-html {
+	background-image:
+		url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiM4MjNhOWI7fS5jbHMtMntmaWxsOiNlY2JkZmY7fS5jbHMtM3tmaWxsOiNmZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5NdF9IVE1MPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yMiwwSDRBMiwyLDAsMCwwLDIsMlYzMGEyLDIsMCwwLDAsMiwySDI4YTIsMiwwLDAsMCwyLTJWOFoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0yMiwwVjdhMSwxLDAsMCwwLDEsMWg3WiIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTIwLjY0LDI2Ljc3bC0xLjI4LTEuNTRMMjQuNDQsMjFsLTUuMDgtNC4yMywxLjI4LTEuNTQsNiw1YTEsMSwwLDAsMSwwLDEuNTRaIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTEuMjgsMjYuNzdsLTYtNWExLDEsMCwwLDEsMC0xLjU0bDYtNSwxLjI4LDEuNTRMNy40OCwyMWw1LjA4LDQuMjNaIi8+PHJlY3QgY2xhc3M9ImNscy0zIiB4PSI3Ljc1IiB5PSIyMCIgd2lkdGg9IjE2LjQ5IiBoZWlnaHQ9IjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04LjI2IDMxLjQyKSByb3RhdGUoLTc1Ljk1KSIvPjwvc3ZnPg==");
+}
+
+.e-fe-pdf {
+	background-image:
+		url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmZjNlM2U7fS5jbHMtMntmaWxsOiNmZmY7fS5jbHMtM3tmaWxsOiNmZmNjY2I7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5NdF9QREY8L3RpdGxlPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIyLDBINEEyLDIsMCwwLDAsMiwyVjMwYTIsMiwwLDAsMCwyLDJIMjhhMiwyLDAsMCwwLDItMlY4WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTEwLjI5LDE0LjgxQTIuNDcsMi40NywwLDAsMSwxMS40LDE1YTIsMiwwLDAsMSwuNzIuNTgsMi4yNCwyLjI0LDAsMCwxLC40LjgyLDMuODEsMy44MSwwLDAsMSwuMTIuOTUsMy4xMSwzLjExLDAsMCwxLS4yLDEuMTUsMiwyLDAsMCwxLS41NS44LDIuMjQsMi4yNCwwLDAsMS0uODYuNDdBMy44NiwzLjg2LDAsMCwxLDkuOTIsMjBIOXYzLjQySDcuMjZWMTQuODFabS0uNTMsMy44N2ExLjEyLDEuMTIsMCwwLDAsLjgzLS4zMSwxLjI4LDEuMjgsMCwwLDAsLjMyLTEsMS41MywxLjUzLDAsMCwwLS4yNy0xLDEuMTQsMS4xNCwwLDAsMC0uOTMtLjM0SDl2Mi42WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTE2LjQxLDE0LjgxYTMuMTcsMy4xNywwLDAsMSwxLjQ1LjI5LDIuMTcsMi4xNywwLDAsMSwuODYuODQsMy44LDMuOCwwLDAsMSwuNDEsMS4zMkExMi42LDEyLjYsMCwwLDEsMTkuMjQsMTlhMTIuMzMsMTIuMzMsMCwwLDEtLjE0LDIsMy43OSwzLjc5LDAsMCwxLS40NywxLjM4LDIuMSwyLjEsMCwwLDEtLjkuOCwzLjMyLDMuMzIsMCwwLDEtMS40My4yN0gxMy41OFYxNC44MVptLS4zNCw3LjI5QTEuNSwxLjUsMCwwLDAsMTYuOCwyMmExLjA5LDEuMDksMCwwLDAsLjQ0LS41MiwzLDMsMCwwLDAsLjIyLS45NWMwLS4zOS4wNS0uODguMDUtMS40NmExMi4wOCwxMi4wOCwwLDAsMC0uMDUtMS4yOCwzLjA5LDMuMDksMCwwLDAtLjE5LS45MiwxLjEzLDEuMTMsMCwwLDAtLjQ1LS41NSwxLjQxLDEuNDEsMCwwLDAtLjc4LS4xOUgxNS4zdjZaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjUuMTcsMTQuODF2MS40MUgyMi4xMXYySDI1djEuNDJIMjIuMTF2My43MkgyMC4zOFYxNC44MVoiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0yMiwwVjdhMSwxLDAsMCwwLDEsMWg3WiIvPjwvc3ZnPg==");
+}
+
+.no-color {
+	background-color: white !important;
+}
+
+.mover {
+	width: 50px;
+	height: 50px;
+	animation: move 3s infinite ease-in-out;
+}
+
+/*
+ CSS for animation of conversion
+*/
+@keyframes move { 
+	30%, 100% {
+		opacity: 1;
+		transform: translate(200px, 0);
+		background-image:
+			url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiM4MjNhOWI7fS5jbHMtMntmaWxsOiNlY2JkZmY7fS5jbHMtM3tmaWxsOiNmZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5NdF9IVE1MPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yMiwwSDRBMiwyLDAsMCwwLDIsMlYzMGEyLDIsMCwwLDAsMiwySDI4YTIsMiwwLDAsMCwyLTJWOFoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0yMiwwVjdhMSwxLDAsMCwwLDEsMWg3WiIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTIwLjY0LDI2Ljc3bC0xLjI4LTEuNTRMMjQuNDQsMjFsLTUuMDgtNC4yMywxLjI4LTEuNTQsNiw1YTEsMSwwLDAsMSwwLDEuNTRaIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTEuMjgsMjYuNzdsLTYtNWExLDEsMCwwLDEsMC0xLjU0bDYtNSwxLjI4LDEuNTRMNy40OCwyMWw1LjA4LDQuMjNaIi8+PHJlY3QgY2xhc3M9ImNscy0zIiB4PSI3Ljc1IiB5PSIyMCIgd2lkdGg9IjE2LjQ5IiBoZWlnaHQ9IjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04LjI2IDMxLjQyKSByb3RhdGUoLTc1Ljk1KSIvPjwvc3ZnPg==");
+	}
+
+	0%
+	{
+		opacity:1;
+		background-image : url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmZjNlM2U7fS5jbHMtMntmaWxsOiNmZmY7fS5jbHMtM3tmaWxsOiNmZmNjY2I7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5NdF9QREY8L3RpdGxlPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIyLDBINEEyLDIsMCwwLDAsMiwyVjMwYTIsMiwwLDAsMCwyLDJIMjhhMiwyLDAsMCwwLDItMlY4WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTEwLjI5LDE0LjgxQTIuNDcsMi40NywwLDAsMSwxMS40LDE1YTIsMiwwLDAsMSwuNzIuNTgsMi4yNCwyLjI0LDAsMCwxLC40LjgyLDMuODEsMy44MSwwLDAsMSwuMTIuOTUsMy4xMSwzLjExLDAsMCwxLS4yLDEuMTUsMiwyLDAsMCwxLS41NS44LDIuMjQsMi4yNCwwLDAsMS0uODYuNDdBMy44NiwzLjg2LDAsMCwxLDkuOTIsMjBIOXYzLjQySDcuMjZWMTQuODFabS0uNTMsMy44N2ExLjEyLDEuMTIsMCwwLDAsLjgzLS4zMSwxLjI4LDEuMjgsMCwwLDAsLjMyLTEsMS41MywxLjUzLDAsMCwwLS4yNy0xLDEuMTQsMS4xNCwwLDAsMC0uOTMtLjM0SDl2Mi42WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTE2LjQxLDE0LjgxYTMuMTcsMy4xNywwLDAsMSwxLjQ1LjI5LDIuMTcsMi4xNywwLDAsMSwuODYuODQsMy44LDMuOCwwLDAsMSwuNDEsMS4zMkExMi42LDEyLjYsMCwwLDEsMTkuMjQsMTlhMTIuMzMsMTIuMzMsMCwwLDEtLjE0LDIsMy43OSwzLjc5LDAsMCwxLS40NywxLjM4LDIuMSwyLjEsMCwwLDEtLjkuOCwzLjMyLDMuMzIsMCwwLDEtMS40My4yN0gxMy41OFYxNC44MVptLS4zNCw3LjI5QTEuNSwxLjUsMCwwLDAsMTYuOCwyMmExLjA5LDEuMDksMCwwLDAsLjQ0LS41MiwzLDMsMCwwLDAsLjIyLS45NWMwLS4zOS4wNS0uODguMDUtMS40NmExMi4wOCwxMi4wOCwwLDAsMC0uMDUtMS4yOCwzLjA5LDMuMDksMCwwLDAtLjE5LS45MiwxLjEzLDEuMTMsMCwwLDAtLjQ1LS41NSwxLjQxLDEuNDEsMCwwLDAtLjc4LS4xOUgxNS4zdjZaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjUuMTcsMTQuODF2MS40MUgyMi4xMXYySDI1djEuNDJIMjIuMTF2My43MkgyMC4zOFYxNC44MVoiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0yMiwwVjdhMSwxLDAsMCwwLDEsMWg3WiIvPjwvc3ZnPg==");
+	}
+	
+	10%
+	{
+	opacity :1;
+	}
+}
+.area {
+	width: 250px;
+	height: 50px;
+	margin: 0 auto;
+}
+</style>
+<!-- Custom styles for this template -->
+<link href="css/sticky-footer.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">
+	<!-- Begin page content -->
+	<main role="main" class="flex-shrink-0">
+		<div class="container">
+			<h1 class="mt-5">Unicon</h1>
+			<p class="lead">Pdf to Html.</p>
+			<div class="form-group col-4 mb-2">
+				<a href="\" class="btn btn-primary primary submit-btn ">Home</a>
+				<button id="files" type="submit"
+					class="btn btn-primary primary submit-btn ">View files</button>
+
+			</div>
+
+			<fieldset>
+				<div class="single-upload">
+					<div id="home" class="alert alert-secondary no-color ">
+
+						<form class="form-inline" id="singleUploadForm"
+							name="singleUploadForm">
+							<div class="form-group col-8  mb-2">
+								<div class="custom-file">
+									<input id="singleFileUploadInput" type="file" name="file"
+										class="file-input custom-file-input" required /> <label
+										class="custom-file-label" id="custom-file-label"
+										for="customFile">Choose file</label>
+								</div>
+							</div>
+							<div class="form-group col-4 mb-2">
+								<button type="submit"
+									class="btn btn-primary primary submit-btn ">convert</button>
+							</div>
+						</form>
+
+						<hr>
+						<p class="mb-0">
+						<p>Choose pdf file and click convert</p>
+					
+					</div>
+
+					<div id="converting" class="alert alert-secondary no-color d-none">
+						<div class="area">
+							<div class="mover"></div>
+						</div>
+						<hr>
+						<p class="mb-0">
+						<p>Converting....</p>
+			
+					</div>
+
+					<div class="upload-response">
+						<div id="singleFileUploadError"
+							class="alert alert-danger no-color d-none"></div>
+						<div id="stampFileUploadSuccess"
+							class="alert alert-secondary no-color d-none"></div>
+					</div>
+
+
+
+				</div>
+			</fieldset>
+		</div>
+	</main>
+
+	<footer class="footer mt-auto py-3">
+		<div class="container">
+			<span class="text-muted">Unicon v 1.0</span>
+		</div>
+	</footer>
+
+	<!-- JS libraries -->
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="main-jq.js"></script>
+</body>
+
+</html>
